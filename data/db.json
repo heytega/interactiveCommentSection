@@ -1,0 +1,102 @@
+{
+  "currentUser": {
+    "image": {
+      "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+    },
+    "username": "juliusomo"
+  },
+  "comments": [
+    {
+      "id": 1,
+      "content": "Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.",
+      "createdAt": "1 month ago",
+      "score": 7,
+      "user": {
+        "image": {
+          "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg"
+        },
+        "username": "amyrobson"
+      },
+      "replies": []
+    },
+    {
+      "id": 2,
+      "content": "Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!",
+      "createdAt": "2 weeks ago",
+      "score": 15,
+      "user": {
+        "image": {
+          "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg"
+        },
+        "username": "maxblagun"
+      },
+      "replies": [
+        {
+          "id": 3,
+          "content": "If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.",
+          "createdAt": "1 week ago",
+          "score": 4,
+          "replyingTo": "maxblagun",
+          "user": {
+            "image": {
+              "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg"
+            },
+            "username": "ramsesmiron"
+          }
+        },
+        {
+          "id": 4,
+          "content": "I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.",
+          "createdAt": "2 days ago",
+          "score": 2,
+          "replyingTo": "ramsesmiron",
+          "user": {
+            "image": {
+              "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+            },
+            "username": "juliusomo"
+          }
+        }
+      ]
+    },
+    {
+      "id": "1652128038814",
+      "content": "Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks! Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.",
+      "createdAt": "Just Now",
+      "score": 14,
+      "user": {
+        "image": {
+          "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+        },
+        "username": "juliusomo"
+      },
+      "replies": []
+    },
+    {
+      "id": "1652300650837",
+      "content": "Donec sapien ligula, rhoncus et odio ac, aliquet fermentum libero. Integer malesuada porta luctus. Etiam tempor justo ut viverra vestibulum.",
+      "createdAt": "Just Now",
+      "score": 0,
+      "user": {
+        "image": {
+          "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+        },
+        "username": "juliusomo"
+      },
+      "replies": []
+    },
+    {
+      "id": "1652300688886",
+      "content": "Nam id faucibus elit, ut pretium justo. Nunc orci nisl, imperdiet at metus a, consequat lobortis enim. Quisque sed risus sed lorem venenatis fermentum eu convallis quam. Pellentesque condimentum mi ante, non ornare ex rhoncus in. Mauris pulvinar, mi vitae gravida interdum, elit ipsum facilisis nisl, nec ullamcorper sem orci.",
+      "createdAt": "Just Now",
+      "score": 0,
+      "user": {
+        "image": {
+          "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+        },
+        "username": "juliusomo"
+      },
+      "replies": []
+    }
+  ]
+}
