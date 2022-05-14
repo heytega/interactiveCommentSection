@@ -63,20 +63,35 @@
       "id": "1652128038814",
       "content": "Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks! Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.",
       "createdAt": "Just Now",
-      "score": 14,
+      "score": 44,
       "user": {
         "image": {
           "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
         },
         "username": "juliusomo"
       },
-      "replies": []
+      "replies": [],
+      "edited": "Edited"
     },
     {
       "id": "1652300650837",
       "content": "Donec sapien ligula, rhoncus et odio ac, aliquet fermentum libero. Integer malesuada porta luctus. Etiam tempor justo ut viverra vestibulum.",
       "createdAt": "Just Now",
-      "score": 0,
+      "score": 13,
+      "user": {
+        "image": {
+          "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+        },
+        "username": "juliusomo"
+      },
+      "replies": [],
+      "edited": "Edited"
+    },
+    {
+      "id": "1652478899627",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam consequatur natus eius nostrum in dolores ipsum maiores alias illo reprehenderit corporis esse sunt, neque, culpa eos sit ratione error! Explicabo totam aperiam velit? Necessitatibus, unde ex enim ullam natus doloribus. Labore nihil molestiae iure nam est, enim vitae nemo natus!",
+      "createdAt": "Just Now",
+      "score": 2,
       "user": {
         "image": {
           "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
@@ -86,10 +101,37 @@
       "replies": []
     },
     {
-      "id": "1652300688886",
-      "content": "Nam id faucibus elit, ut pretium justo. Nunc orci nisl, imperdiet at metus a, consequat lobortis enim. Quisque sed risus sed lorem venenatis fermentum eu convallis quam. Pellentesque condimentum mi ante, non ornare ex rhoncus in. Mauris pulvinar, mi vitae gravida interdum, elit ipsum facilisis nisl, nec ullamcorper sem orci.",
+      "id": "1652478941767",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam consequatur natus eius nostrum in dolores ipsum maiores alias illo reprehenderit corporis esse sunt, neque, culpa eos sit ratione error! Explicabo totam aperiam velit? Necessitatibus, unde ex enim ullam natus doloribus. Labore nihil molestiae iure nam est, enim vitae nemo natus!",
       "createdAt": "Just Now",
-      "score": 0,
+      "score": 1,
+      "user": {
+        "image": {
+          "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+        },
+        "username": "juliusomo"
+      },
+      "replies": []
+    },
+    {
+      "id": "1652531866025",
+      "createdAt": "Just Now",
+      "score": 3,
+      "user": {
+        "image": {
+          "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+        },
+        "username": "juliusomo"
+      },
+      "replies": [],
+      "edited": "Edited",
+      "content": "John Doe though wonderful"
+    },
+    {
+      "id": "1652534942074",
+      "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis assumenda delectus quisquam ipsa magni labore earum quo quos tempora fugit.",
+      "createdAt": "Just Now",
+      "score": 4,
       "user": {
         "image": {
           "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"

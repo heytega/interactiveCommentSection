@@ -14,6 +14,7 @@ function Replies({
   replyingTo,
   user,
   removeComment,
+  isEditing,
 }) {
   const [innerReadMore, setInnerReadMore] = useState(false);
   const [innerReply, setInnerReply] = useState(false);
@@ -25,7 +26,7 @@ function Replies({
   return (
     <>
       <div className="comment-template card">
-        <Upvote existingScore={score} id={id} />
+        <Upvote isEditing={isEditing} existingScore={score} id={id} />
 
         <Identity currentUser={currentUser} user={user} createdAt={createdAt} />
 

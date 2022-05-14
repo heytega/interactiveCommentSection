@@ -14,13 +14,17 @@ const Comments = ({
   const [processEdit, setProcessEdit] = useState(false);
 
   const editComment = (id) => {
-    setProcessEdit(true);
-    setEdit(comments.find((comment) => comment.id === id));
-    window.scrollTo(0, document.body.scrollHeight);
+    try {
+      setEdit(comments.find((comment) => comment.id === id));
+      setProcessEdit(true);
+    } catch (error) {
+      alert("Error Staging Edit");
+    }
   };
 
   const endProcess = () => {
     setProcessEdit(false);
+    setEdit(null);
   };
 
   return (
@@ -32,17 +36,13 @@ const Comments = ({
           {...comment}
           removeComment={removeComment}
           editComment={editComment}
+          updateComment={updateComment}
           isEditing={processEdit && edit.id === comment.id}
+          endProcess={endProcess}
         />
       ))}
 
-      <Form
-        endProcess={endProcess}
-        comment={edit}
-        addComment={addComment}
-        currentUser={currentUser}
-        updateComment={updateComment}
-      />
+      <Form addComment={addComment} currentUser={currentUser} />
     </>
   );
 };

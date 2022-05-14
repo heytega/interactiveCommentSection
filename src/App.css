@@ -6,6 +6,7 @@
 /* comment section template */
 .card {
   background: hsl(0, 0%, 100%);
+  position: relative;
   border-radius: 10px;
   padding: 10px 10px 10px 0px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
@@ -21,8 +22,13 @@
  padding: 15px 10px 10px 0px;
 }
 
-.activeEdit {
-  opacity: 0.4;
+.editComment-template {
+ display: grid;
+ grid-template-columns: 10% 1fr 25%;
+ grid-template-rows: 30% 70%;
+ column-gap: 10px;
+ align-items: center;
+ padding: 15px 10px 35px 0px;
 }
 
 .reply-template {
@@ -86,6 +92,7 @@
   color: hsl(211, 10%, 45%);
 }
 
+
 .textArea .replyingTo {
   display: inline;
   color: hsl(238, 40%, 52%);
@@ -130,6 +137,60 @@
   display: inline;
   color: hsl(238, 40%, 52%);
   font-weight: 500;
+}
+
+/* When the comment is being Edited */
+
+.edit-textArea {
+  height: 10rem;
+}
+
+.textArea form .input {
+  width: 98%;
+  height: 100px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: 1px solid hsl(223, 19%, 93%);
+  font-family: 'rubik';
+  color: hsl(211, 10%, 45%);
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: flex-start;
+}
+
+.textArea form .input:focus {
+border: 1px solid hsl(211, 10%, 45%);
+outline: none;
+}
+
+.textArea form button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+  justify-self: right;
+  margin-left: 10px;
+}
+
+.textArea form .cancel{
+  background:hsl(211, 10%, 45%) ;
+}
+
+.textArea form .update{
+  background: hsl(238, 40%, 52%);
+}
+
+.textArea form button:hover {
+  background: hsl(239, 57%, 85%);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: right;
+  padding-right: 10px;
 }
 
 .identity {
@@ -199,9 +260,17 @@
   margin-top: 0.3rem;
 }
 
+.delete-btn:hover {
+  opacity: 0.6;
+}
+
 .edit-btn{
  color: #5357B6;
  margin-top: 0.3rem;
+}
+
+.edit-btn:hover {
+  opacity: 0.6;
 }
 
 .reply-btn {
@@ -210,6 +279,10 @@
   padding-right: 20px;
   align-self: center;
   margin-top: 0.3rem;
+}
+
+.reply-btn:hover {
+  opacity: 0.6;
 }
 
 /* Delete Comment Confirmation */

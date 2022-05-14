@@ -17,32 +17,49 @@ const Comment = ({
   edited,
   removeComment,
   editComment,
+  updateComment,
   isEditing,
+  endProcess,
 }) => {
   const [readMore, setReadMore] = useState(false);
   const [reply, setReply] = useState(false);
+  const [editContent, setEditContent] = useState(content);
 
   const handleReply = () => {
     return setReply(!reply);
   };
 
+  const handleEdit = (e) => {
+    e.preventDefault();
+    const updatedComment = { id, createdAt, score, user, replies, edited };
+    updateComment({
+      ...updatedComment,
+      content: editContent,
+      edited: "Edited",
+    });
+    endProcess();
+  };
+
+  const cancelEdit = () => {
+    endProcess();
+  };
+
   return (
     <>
       <div
-        /*className={"comment-template card " isEditing && "activeEdit"}*/ className={
-          isEditing
-            ? "comment-template card activeEdit"
-            : "comment-template card"
+        className={
+          isEditing ? "editComment-template card" : "comment-template card"
         }
       >
-        <Upvote existingScore={score} id={id} />
+        <Upvote isEditing={isEditing} existingScore={score} id={id} />
         <Identity
-          edited={isEditing ? "Editing.." : edited}
+          edited={isEditing ? "Editing" : edited}
           currentUser={currentUser}
           user={user}
           createdAt={createdAt}
         />
         <ControlButtons
+          isEditing={isEditing}
           currentUser={currentUser}
           id={id}
           user={user}
@@ -50,14 +67,41 @@ const Comment = ({
           removeComment={removeComment}
           editComment={editComment}
         />
-        <section className={readMore ? "readMore-textArea" : "textArea"}>
-          {readMore ? content : `${content.substring(0, 210)}`}
-          {content.length > content.substring(0, 210).length && (
-            <button onClick={() => setReadMore(!readMore)}>
-              {readMore ? "...Show Less" : "...Read More"}
-            </button>
-          )}
-        </section>
+
+        {isEditing ? (
+          <section className="textArea edit-textArea">
+            <form>
+              <div>
+                <textarea
+                  className="input"
+                  value={editContent}
+                  onChange={(e) => setEditContent(e.target.value)}
+                ></textarea>
+              </div>
+              <div className="buttonContainer">
+                <button className="cancel" onClick={() => cancelEdit()}>
+                  CANCEL
+                </button>
+                <button
+                  className="update"
+                  type="submit"
+                  onClick={(e) => handleEdit(e)}
+                >
+                  UPDATE
+                </button>
+              </div>
+            </form>
+          </section>
+        ) : (
+          <section className={readMore ? "readMore-textArea" : "textArea"}>
+            {readMore ? content : `${content.substring(0, 210)}`}
+            {content.length > content.substring(0, 210).length && (
+              <button onClick={() => setReadMore(!readMore)}>
+                {readMore ? "...Show Less" : "...Read More"}
+              </button>
+            )}
+          </section>
+        )}
       </div>
       {reply && <Form score={score} currentUser={currentUser} />}
       <div className="reply-template">
@@ -68,6 +112,7 @@ const Comment = ({
               {...replies}
               removeComment={removeComment}
               currentUser={currentUser}
+              isEditing={isEditing}
             />
           );
         })}

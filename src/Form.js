@@ -1,41 +1,24 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 
-const Form = ({
-  comment,
-  currentUser,
-  addComment,
-  updateComment,
-  endProcess,
-}) => {
+const Form = ({ currentUser, addComment }) => {
   const [content, setContent] = useState("");
 
-  useEffect(() => {
-    setContent(comment ? comment.content : "");
-  }, [comment]);
+  // useEffect(() => {
+  //   setContent(comment ? comment.content : "");
+  // }, [comment]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (comment && comment.id) {
-      // update comment
-      updateComment({
-        ...comment,
-        content: content,
-        edited: "Edited",
-      });
-    } else {
-      // new comment
-      addComment({
-        id: new Date().getTime().toString(),
-        content,
-        createdAt: "Just Now",
-        score: 0,
-        user: currentUser,
-        replies: [],
-      });
-    }
+    addComment({
+      id: new Date().getTime().toString(),
+      content,
+      createdAt: "Just Now",
+      score: 0,
+      user: currentUser,
+      replies: [],
+    });
     setContent("");
-    endProcess();
   };
 
   return (

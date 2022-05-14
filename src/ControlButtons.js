@@ -9,6 +9,7 @@ const ControlButtons = ({
   removeComment,
   currentUser,
   editComment,
+  isEditing,
 }) => {
   const [showDeleteDialogue, setShowDeleteDialogue] = useState(false);
 
@@ -32,7 +33,7 @@ const ControlButtons = ({
         <div className="currentUser-btn comment-btn">
           <button
             className="comment-btn delete-btn"
-            onClick={() => setShowDeleteDialogue(true)}
+            onClick={() => isEditing === false && setShowDeleteDialogue(true)}
           >
             <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
               <path
