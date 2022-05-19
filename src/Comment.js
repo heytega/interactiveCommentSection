@@ -4,7 +4,7 @@ import ControlButtons from "./ControlButtons";
 import Identity from "./Identity";
 import Replies from "./Replies";
 import Upvote from "./Upvote";
-import Form from "./Form";
+import ReplyForm from "./ReplyForm";
 
 const Comment = ({
   currentUser,
@@ -20,6 +20,7 @@ const Comment = ({
   updateComment,
   isEditing,
   endProcess,
+  addReply,
 }) => {
   const [readMore, setReadMore] = useState(false);
   const [reply, setReply] = useState(false);
@@ -103,7 +104,13 @@ const Comment = ({
           </section>
         )}
       </div>
-      {reply && <Form score={score} currentUser={currentUser} />}
+      {reply && 
+        <ReplyForm 
+          currentUser={currentUser} 
+          commentId={id} 
+          commentAuthor={user.username}
+          addReply={addReply} 
+      />}
       <div className="reply-template">
         {replies.map((replies) => {
           return (

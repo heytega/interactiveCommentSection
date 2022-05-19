@@ -79,6 +79,31 @@ const App = () => {
     }
   };
 
+  // add reply to comment
+  const addReply = async (commentId, reply) => {
+    const comment = comments.find((comment) => comment.id === commentId);
+    const newComment = {
+      ...comment,
+      replies: [...comment.replies, reply],
+    };
+
+    try {
+      const res = await fetch(`http://localhost:7000/comments/${commentId}`, {
+        method: "PUT",
+        headers: { "content-Type": "application/json" },
+        body: JSON.stringify(newComment),
+      });
+      if (res.ok) {
+        const updatedComments = comments.map((c) =>
+          c.id === commentId ? newComment : c
+        );
+        setComment(updatedComments);
+      }
+    } catch (error) {
+      alert("Error adding reply");
+    }
+  };
+
   // effects
   useEffect(() => {
     const init = async () => {
@@ -102,6 +127,7 @@ const App = () => {
       removeComment={removeComment}
       addComment={addComment}
       updateComment={updateComment}
+      addReply={addReply}
     />
   );
 };
