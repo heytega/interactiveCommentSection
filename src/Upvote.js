@@ -2,36 +2,36 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 
 const Upvote = ({ existingScore, id, isEditing }) => {
-  const [upVote, setUpVote] = useState(existingScore);
-  const [addVote, setAddVote] = useState(true);
+  const [noOfVote, setNoOfVote] = useState(existingScore);
+  const [canVote, setCanVote] = useState(true);
 
   const patchUrl = `http://localhost:7000/comments/${id}`;
 
   const downVote = () => {
-    if (addVote && upVote > 0) {
-      setUpVote(upVote - 1);
+    if (canVote && noOfVote > 0) {
+      setNoOfVote(noOfVote - 1);
     }
   };
 
   useEffect(() => {
-    setAddVote(false);
+    setCanVote(false);
     const newVote = {
-      score: upVote,
+      score: noOfVote,
     };
     fetch(patchUrl, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newVote),
     });
-    setAddVote(true);
-  }, [upVote]);
+    setCanVote(true);
+  }, [noOfVote]);
 
   return (
     <section className="upvote">
       <div className="upvote-button">
         <button
           onClick={() =>
-            isEditing === false && addVote && setUpVote(upVote + 1)
+            isEditing === false && canVote && setNoOfVote(noOfVote + 1)
           }
         >
           <svg width="11" height="11" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +42,7 @@ const Upvote = ({ existingScore, id, isEditing }) => {
           </svg>
         </button>
 
-        <h4>{upVote}</h4>
+        <h4>{noOfVote}</h4>
 
         <button onClick={() => isEditing === false && downVote()}>
           <svg width="11" height="11" xmlns="http://www.w3.org/2000/svg">
