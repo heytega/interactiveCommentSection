@@ -16,13 +16,16 @@ function Replies({
   removeComment,
   isEditing,
 }) {
+  // data & modifiers
   const [innerReadMore, setInnerReadMore] = useState(false);
   const [innerReply, setInnerReply] = useState(false);
 
+  // methods & functions
   const handleInnerReply = () => {
     return setInnerReply(!innerReply);
   };
 
+  // render
   return (
     <>
       <div className="comment-template card">

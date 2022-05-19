@@ -9,6 +9,7 @@ const Comments = ({
   removeComment,
   addComment,
   updateComment,
+  addReply,
 }) => {
   const [edit, setEdit] = useState(null);
   const [processEdit, setProcessEdit] = useState(false);
@@ -38,6 +39,7 @@ const Comments = ({
           editComment={editComment}
           updateComment={updateComment}
           isEditing={processEdit && edit.id === comment.id}
+          addReply={addReply}
           endProcess={endProcess}
         />
       ))}
