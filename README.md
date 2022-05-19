@@ -6,6 +6,7 @@ This is a personal solution to the [Interactive comments section challenge on Fr
 
 This project heavily relies on a fake REST API provide by json-server. click [here](https://www.npmjs.com/package/json-server) to go through the official documentation and find out how to run the server and track your data.
 
-**Note: Use 'json-server --watch data/db.json --port 7000' to run your local server**
+**Note: Use 'json-server --watch data/db.json --port 7000' to run your local server.
+Should you experience a bug using the above command Use "npx json-server --watch data/db.json --port 7000" instead**
 
 This project is still work in progress and commits will continually be made to complete it.
