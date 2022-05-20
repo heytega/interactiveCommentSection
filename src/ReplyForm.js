@@ -1,6 +1,12 @@
 import { useState } from "react";
 
-const ReplyForm = ({ currentUser, commentId, commentAuthor, addReply }) => {
+const ReplyForm = ({
+  currentUser,
+  commentId,
+  commentAuthor,
+  addReply,
+  handleReply,
+}) => {
   const [content, setContent] = useState("");
 
   // useEffect(() => {
@@ -18,6 +24,7 @@ const ReplyForm = ({ currentUser, commentId, commentAuthor, addReply }) => {
       replyingTo: commentAuthor,
     });
     setContent("");
+    handleReply();
   };
 
   return (

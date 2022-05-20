@@ -9,8 +9,8 @@
     {
       "id": 1,
       "content": "Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.",
-      "createdAt": "1 month ago",
-      "score": 7,
+      "createdAt": "2022-04-19T02:46:08.087Z",
+      "score": 10,
       "user": {
         "image": {
           "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg"
@@ -30,13 +30,39 @@
             "username": "juliusomo"
           },
           "replyingTo": "amyrobson"
+        },
+        {
+          "id": 1653005352789,
+          "content": "let's see what another reply looks like",
+          "createdAt": "2022-05-20T00:09:12.789Z",
+          "score": 0,
+          "user": {
+            "image": {
+              "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+            },
+            "username": "juliusomo"
+          },
+          "replyingTo": "amyrobson"
+        },
+        {
+          "id": 1653006136193,
+          "content": "Testing out the reply form",
+          "createdAt": "2022-05-20T00:22:16.193Z",
+          "score": 0,
+          "user": {
+            "image": {
+              "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+            },
+            "username": "juliusomo"
+          },
+          "replyingTo": "amyrobson"
         }
       ]
     },
     {
       "id": 2,
       "content": "Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!",
-      "createdAt": "2 weeks ago",
+      "createdAt": "2022-05-05T02:46:08.087Z",
       "score": 15,
       "user": {
         "image": {
@@ -48,7 +74,7 @@
         {
           "id": 3,
           "content": "If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.",
-          "createdAt": "1 week ago",
+          "createdAt": "2022-05-12T02:46:08.087Z",
           "score": 4,
           "replyingTo": "maxblagun",
           "user": {
@@ -61,7 +87,7 @@
         {
           "id": 4,
           "content": "I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.",
-          "createdAt": "2 days ago",
+          "createdAt": "2022-05-17T02:46:08.087Z",
           "score": 2,
           "replyingTo": "ramsesmiron",
           "user": {
@@ -82,67 +108,26 @@
             },
             "username": "juliusomo"
           }
+        },
+        {
+          "id": 1653005449533,
+          "content": "This is an updated reply",
+          "createdAt": "2022-05-20T00:10:49.533Z",
+          "score": 0,
+          "user": {
+            "image": {
+              "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+            },
+            "username": "juliusomo"
+          },
+          "replyingTo": "maxblagun"
         }
       ]
     },
     {
-      "id": "1652128038814",
-      "content": "Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks! Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.",
-      "createdAt": "Just Now",
-      "score": 44,
-      "user": {
-        "image": {
-          "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
-        },
-        "username": "juliusomo"
-      },
-      "replies": [],
-      "edited": "Edited"
-    },
-    {
-      "id": "1652300650837",
-      "content": "Donec sapien ligula, rhoncus et odio ac, aliquet fermentum libero. Integer malesuada porta luctus. Etiam tempor justo ut viverra vestibulum.",
-      "createdAt": "Just Now",
-      "score": 13,
-      "user": {
-        "image": {
-          "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
-        },
-        "username": "juliusomo"
-      },
-      "replies": [],
-      "edited": "Edited"
-    },
-    {
-      "id": "1652478899627",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam consequatur natus eius nostrum in dolores ipsum maiores alias illo reprehenderit corporis esse sunt, neque, culpa eos sit ratione error! Explicabo totam aperiam velit? Necessitatibus, unde ex enim ullam natus doloribus. Labore nihil molestiae iure nam est, enim vitae nemo natus!",
-      "createdAt": "Just Now",
-      "score": 2,
-      "user": {
-        "image": {
-          "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
-        },
-        "username": "juliusomo"
-      },
-      "replies": []
-    },
-    {
-      "id": "1652478941767",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam consequatur natus eius nostrum in dolores ipsum maiores alias illo reprehenderit corporis esse sunt, neque, culpa eos sit ratione error! Explicabo totam aperiam velit? Necessitatibus, unde ex enim ullam natus doloribus. Labore nihil molestiae iure nam est, enim vitae nemo natus!",
-      "createdAt": "Just Now",
-      "score": 1,
-      "user": {
-        "image": {
-          "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
-        },
-        "username": "juliusomo"
-      },
-      "replies": []
-    },
-    {
-      "id": "1652531866025",
-      "createdAt": "Just Now",
-      "score": 3,
+      "id": "1653006658359",
+      "createdAt": "2022-05-20T00:30:58.359Z",
+      "score": 8,
       "user": {
         "image": {
           "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
@@ -151,24 +136,11 @@
       },
       "replies": [],
       "edited": "Edited",
-      "content": "John Doe though wonderful"
+      "content": "Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks! Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well."
     },
     {
-      "id": "1652534942074",
-      "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis assumenda delectus quisquam ipsa magni labore earum quo quos tempora fugit.",
-      "createdAt": "Just Now",
-      "score": 4,
-      "user": {
-        "image": {
-          "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
-        },
-        "username": "juliusomo"
-      },
-      "replies": []
-    },
-    {
-      "id": "1652924611151",
-      "createdAt": "Just Now",
+      "id": "1653006713828",
+      "createdAt": "2022-05-20T00:31:53.828Z",
       "score": 0,
       "user": {
         "image": {
@@ -178,7 +150,20 @@
       },
       "replies": [],
       "edited": "Edited",
-      "content": "Hello Tega, make more sense."
+      "content": "Donec sapien ligula, rhoncus et odio ac, aliquet fermentum libero. Integer malesuada porta luctus. Etiam tempor justo ut viverra vestibulum. So I'm not making another push request unless the input differs from the already existing data"
+    },
+    {
+      "id": "1653006870553",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam consequatur natus eius nostrum in dolores ipsum maiores alias illo reprehenderit corporis esse sunt, neque, culpa eos sit ratione error! Explicabo totam aperiam velit? Necessitatibus, unde ex enim ullam natus doloribus. Labore nihil molestiae iure nam est, enim vitae nemo natus!",
+      "createdAt": "2022-05-20T00:34:30.553Z",
+      "score": 0,
+      "user": {
+        "image": {
+          "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+        },
+        "username": "juliusomo"
+      },
+      "replies": []
     }
   ]
 }

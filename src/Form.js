@@ -4,16 +4,12 @@ import { useState } from "react";
 const Form = ({ currentUser, addComment }) => {
   const [content, setContent] = useState("");
 
-  // useEffect(() => {
-  //   setContent(comment ? comment.content : "");
-  // }, [comment]);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     addComment({
       id: new Date().getTime().toString(),
       content,
-      createdAt: "Just Now",
+      createdAt: new Date().toISOString(),
       score: 0,
       user: currentUser,
       replies: [],
