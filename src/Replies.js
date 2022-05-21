@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import ControlButtons from "./ControlButtons";
 import Identity from "./Identity";
-import Upvote from "./Upvote";
+import ReplyUpvote from "./ReplyUpvote";
 import Form from "./Form";
 
 function Replies({
@@ -15,11 +15,15 @@ function Replies({
   user,
   removeComment,
   isEditing,
+  commentId,
+  modifyVote,
 }) {
   // data & modifiers
   const [innerReadMore, setInnerReadMore] = useState(false);
   const [innerReply, setInnerReply] = useState(false);
-
+  console.log(id);
+  console.log(commentId);
+  console.log(modifyVote);
   // methods & functions
   const handleInnerReply = () => {
     return setInnerReply(!innerReply);
@@ -29,7 +33,14 @@ function Replies({
   return (
     <>
       <div className="comment-template card">
-        <Upvote isEditing={isEditing} existingScore={score} id={id} />
+        {/* isEditing to stop the Upvote functionality if a comment edit is taking play */}
+        <ReplyUpvote
+          isEditing={isEditing}
+          existingScore={score}
+          idForReply={id}
+          commentId={commentId}
+          modifyVote={modifyVote}
+        />
 
         <Identity currentUser={currentUser} user={user} createdAt={createdAt} />
 

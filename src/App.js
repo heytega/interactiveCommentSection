@@ -104,6 +104,48 @@ const App = () => {
     }
   };
 
+  // add and Upvote Functionality to the replies.
+  const modifyVote = async (commentId, replyId, newScore) => {
+    const comment = await comments.find((comment) => comment.id === commentId);
+    console.log(comment);
+
+    const targetReply = comment.replies.find((c) => c.id === replyId);
+    console.log(targetReply);
+
+    const restOfReplies = comment.replies.filter(
+      (reply) => reply.id !== replyId
+    );
+    console.log(restOfReplies);
+
+    const updatedReply = {
+      ...targetReply,
+      score: newScore,
+    };
+    console.log(updatedReply);
+
+    const modifiedComment = {
+      ...comment,
+      replies: [...restOfReplies, updatedReply],
+    };
+    console.log(modifiedComment);
+
+    try {
+      const res = await fetch(`http://localhost:7000/comments/${commentId}`, {
+        method: "PUT",
+        headers: { "content-Type": "application/json" },
+        body: JSON.stringify(modifiedComment),
+      });
+      if (res.ok) {
+        const newlyModified = comments.map((c) =>
+          c.id === commentId ? modifiedComment : c
+        );
+        setComment(newlyModified);
+      }
+    } catch (error) {
+      alert("Error implementing Upvote");
+    }
+  };
+
   // effects
   useEffect(() => {
     const init = async () => {
@@ -128,6 +170,7 @@ const App = () => {
       addComment={addComment}
       updateComment={updateComment}
       addReply={addReply}
+      modifyVote={modifyVote}
     />
   );
 };

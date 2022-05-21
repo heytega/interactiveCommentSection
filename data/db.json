@@ -10,7 +10,7 @@
       "id": 1,
       "content": "Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.",
       "createdAt": "2022-04-19T02:46:08.087Z",
-      "score": 10,
+      "score": 8,
       "user": {
         "image": {
           "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg"
@@ -22,20 +22,7 @@
           "id": 1652928368087,
           "content": "This is a reply too.",
           "createdAt": "2022-05-19T02:46:08.087Z",
-          "score": 0,
-          "user": {
-            "image": {
-              "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
-            },
-            "username": "juliusomo"
-          },
-          "replyingTo": "amyrobson"
-        },
-        {
-          "id": 1653005352789,
-          "content": "let's see what another reply looks like",
-          "createdAt": "2022-05-20T00:09:12.789Z",
-          "score": 0,
+          "score": 9,
           "user": {
             "image": {
               "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
@@ -48,6 +35,19 @@
           "id": 1653006136193,
           "content": "Testing out the reply form",
           "createdAt": "2022-05-20T00:22:16.193Z",
+          "score": 0,
+          "user": {
+            "image": {
+              "png": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+            },
+            "username": "juliusomo"
+          },
+          "replyingTo": "amyrobson"
+        },
+        {
+          "id": 1653087261004,
+          "content": "Let's see if this reply section still works",
+          "createdAt": "2022-05-20T22:54:21.004Z",
           "score": 0,
           "user": {
             "image": {

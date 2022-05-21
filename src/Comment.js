@@ -21,10 +21,12 @@ const Comment = ({
   isEditing,
   endProcess,
   addReply,
+  modifyVote,
 }) => {
   const [readMore, setReadMore] = useState(false);
   const [reply, setReply] = useState(false);
   const [editContent, setEditContent] = useState(content);
+  console.log(modifyVote);
 
   const handleReply = () => {
     return setReply(!reply);
@@ -32,13 +34,20 @@ const Comment = ({
 
   const handleEdit = (e) => {
     e.preventDefault();
-    const updatedComment = { id, createdAt, score, user, replies, edited };
-    updateComment({
-      ...updatedComment,
-      content: editContent,
-      edited: "Edited",
-    });
-    endProcess();
+
+    if (editContent !== content) {
+      const updatedComment = { id, createdAt, score, user, replies, edited };
+      updateComment({
+        ...updatedComment,
+        content: editContent,
+        edited: "Edited",
+      });
+      endProcess();
+    }
+
+    if (editContent === content) {
+      cancelEdit();
+    }
   };
 
   const cancelEdit = () => {
@@ -104,22 +113,26 @@ const Comment = ({
           </section>
         )}
       </div>
-      {reply && 
-        <ReplyForm 
-          currentUser={currentUser} 
-          commentId={id} 
+      {reply && (
+        <ReplyForm
+          currentUser={currentUser}
+          commentId={id}
           commentAuthor={user.username}
-          addReply={addReply} 
-      />}
+          addReply={addReply}
+          handleReply={handleReply}
+        />
+      )}
       <div className="reply-template">
-        {replies.map((replies) => {
+        {replies.map((reply) => {
           return (
             <Replies
-              key={replies.id}
-              {...replies}
+              key={reply.id}
+              {...reply}
               removeComment={removeComment}
               currentUser={currentUser}
               isEditing={isEditing}
+              commentId={id}
+              modifyVote={modifyVote}
             />
           );
         })}

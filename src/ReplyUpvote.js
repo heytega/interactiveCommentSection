@@ -1,28 +1,33 @@
 import { useState, useEffect } from "react";
 
-const Upvote = ({ existingScore, id, isEditing }) => {
+const ReplyUpvote = ({
+  isEditing,
+  existingScore,
+  idForReply,
+  commentId,
+  modifyVote,
+}) => {
   const [noOfVote, setNoOfVote] = useState(existingScore);
   const [canVote, setCanVote] = useState(true);
 
-  const patchUrl = `http://localhost:7000/comments/${id}`;
-
-  const downVote = () => {
+  const downVote = async () => {
     if (canVote && noOfVote > 0) {
-      setNoOfVote(noOfVote - 1);
+      setNoOfVote(noOfVote + 1);
     }
   };
 
+  const implementVote = async () => {
+    // setCanVote(false);
+    try {
+      await modifyVote(commentId, idForReply, noOfVote);
+    } catch (error) {
+      console.log(error);
+    }
+    // setCanVote(true);
+  };
+
   useEffect(() => {
-    setCanVote(false);
-    const newVote = {
-      score: noOfVote,
-    };
-    fetch(patchUrl, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newVote),
-    });
-    setCanVote(true);
+    implementVote();
   }, [noOfVote]);
 
   return (
@@ -56,4 +61,4 @@ const Upvote = ({ existingScore, id, isEditing }) => {
   );
 };
 
-export default Upvote;
+export default ReplyUpvote;
