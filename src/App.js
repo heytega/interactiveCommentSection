@@ -105,31 +105,31 @@ const App = () => {
   };
 
   // add and Upvote Functionality to the replies.
-  const modifyVote = async (commentId, replyId, newScore) => {
-    const comment = await comments.find((comment) => comment.id === commentId);
-    console.log(comment);
-
-    const targetReply = comment.replies.find((c) => c.id === replyId);
-    console.log(targetReply);
-
-    const restOfReplies = comment.replies.filter(
-      (reply) => reply.id !== replyId
-    );
-    console.log(restOfReplies);
-
-    const updatedReply = {
-      ...targetReply,
-      score: newScore,
-    };
-    console.log(updatedReply);
-
-    const modifiedComment = {
-      ...comment,
-      replies: [...restOfReplies, updatedReply],
-    };
-    console.log(modifiedComment);
-
+  const changeUpvote = async ({ commentId, replyId, newScore }) => {
     try {
+      const comment = comments.find((comment) => comment.id === commentId);
+      console.log(comment);
+
+      const targetReply = comment.replies.find((c) => c.id === replyId);
+      console.log(targetReply);
+
+      const restOfReplies = comment.replies.filter(
+        (reply) => reply.id !== replyId
+      );
+      console.log(restOfReplies);
+
+      const updatedReply = {
+        ...targetReply,
+        score: newScore,
+      };
+      console.log(updatedReply);
+
+      const modifiedComment = {
+        ...comment,
+        replies: [...restOfReplies, updatedReply],
+      };
+      console.log(modifiedComment);
+
       const res = await fetch(`http://localhost:7000/comments/${commentId}`, {
         method: "PUT",
         headers: { "content-Type": "application/json" },
@@ -170,7 +170,7 @@ const App = () => {
       addComment={addComment}
       updateComment={updateComment}
       addReply={addReply}
-      modifyVote={modifyVote}
+      modifyVote={changeUpvote}
     />
   );
 };

@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import ControlButtons from "./ControlButtons";
 import Identity from "./Identity";
@@ -21,9 +20,7 @@ function Replies({
   // data & modifiers
   const [innerReadMore, setInnerReadMore] = useState(false);
   const [innerReply, setInnerReply] = useState(false);
-  console.log(id);
-  console.log(commentId);
-  console.log(modifyVote);
+
   // methods & functions
   const handleInnerReply = () => {
     return setInnerReply(!innerReply);

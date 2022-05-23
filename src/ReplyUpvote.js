@@ -17,13 +17,13 @@ const ReplyUpvote = ({
   };
 
   const implementVote = async () => {
-    // setCanVote(false);
+    setCanVote(false);
     try {
       await modifyVote(commentId, idForReply, noOfVote);
     } catch (error) {
       console.log(error);
     }
-    // setCanVote(true);
+    setCanVote(true);
   };
 
   useEffect(() => {
@@ -34,8 +34,9 @@ const ReplyUpvote = ({
     <section className="upvote">
       <div className="upvote-button">
         <button
-          onClick={() =>
-            isEditing === false && canVote && setNoOfVote(noOfVote + 1)
+          onClick={
+            () => isEditing === false && canVote && setNoOfVote(noOfVote + 1)
+            // modifyVote({ commentId, idForReply, noOfVote })
           }
         >
           <svg width="11" height="11" xmlns="http://www.w3.org/2000/svg">

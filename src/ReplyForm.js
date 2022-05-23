@@ -9,10 +9,6 @@ const ReplyForm = ({
 }) => {
   const [content, setContent] = useState("");
 
-  // useEffect(() => {
-  //   setContent(comment ? comment.content : "");
-  // }, [comment]);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     await addReply(commentId, {
