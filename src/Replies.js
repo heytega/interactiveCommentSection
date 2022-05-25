@@ -15,7 +15,6 @@ function Replies({
   removeComment,
   isEditing,
   commentId,
-  modifyVote,
 }) {
   // data & modifiers
   const [innerReadMore, setInnerReadMore] = useState(false);
@@ -36,7 +35,6 @@ function Replies({
           existingScore={score}
           idForReply={id}
           commentId={commentId}
-          modifyVote={modifyVote}
         />
 
         <Identity currentUser={currentUser} user={user} createdAt={createdAt} />
