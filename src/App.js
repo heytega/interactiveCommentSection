@@ -1,10 +1,15 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import React from "react";
+import { useEffect, useState, useContext } from "react";
 import Comments from "./Comments";
 import LoadingPage from "./Loading";
 
 const comment_url = "http://localhost:7000/comments";
 const currentUser_url = "http://localhost:7000/currentUser";
+
+// Context API for Reply upvote
+
+const ReplyContext = React.createContext();
 
 const App = () => {
   // data initializations
@@ -162,16 +167,17 @@ const App = () => {
     return <LoadingPage />;
   }
   return (
-    <Comments
-      fetchComments={fetchComments}
-      currentUser={currentUser}
-      comments={comments}
-      removeComment={removeComment}
-      addComment={addComment}
-      updateComment={updateComment}
-      addReply={addReply}
-      modifyVote={changeUpvote}
-    />
+    <ReplyContext.Provider value={changeUpvote}>
+      <Comments
+        fetchComments={fetchComments}
+        currentUser={currentUser}
+        comments={comments}
+        removeComment={removeComment}
+        addComment={addComment}
+        updateComment={updateComment}
+        addReply={addReply}
+      />
+    </ReplyContext.Provider>
   );
 };
 
