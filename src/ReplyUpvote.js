@@ -1,14 +1,11 @@
-import { useState, useEffect } from "react";
+import React from "react";
+import { useState, useEffect, useContext } from "react";
 
-const ReplyUpvote = ({
-  isEditing,
-  existingScore,
-  idForReply,
-  commentId,
-  modifyVote,
-}) => {
+const ReplyUpvote = ({ isEditing, existingScore, idForReply, commentId }) => {
   const [noOfVote, setNoOfVote] = useState(existingScore);
   const [canVote, setCanVote] = useState(true);
+
+  const { changeUpvote } = useContext(ReplyContext);
 
   const downVote = async () => {
     if (canVote && noOfVote > 0) {
@@ -19,7 +16,7 @@ const ReplyUpvote = ({
   const implementVote = async () => {
     setCanVote(false);
     try {
-      await modifyVote(commentId, idForReply, noOfVote);
+      await changeUpvote(commentId, idForReply, noOfVote);
     } catch (error) {
       console.log(error);
     }
@@ -34,9 +31,8 @@ const ReplyUpvote = ({
     <section className="upvote">
       <div className="upvote-button">
         <button
-          onClick={
-            () => isEditing === false && canVote && setNoOfVote(noOfVote + 1)
-            // modifyVote({ commentId, idForReply, noOfVote })
+          onClick={() =>
+            isEditing === false && canVote && setNoOfVote(noOfVote + 1)
           }
         >
           <svg width="11" height="11" xmlns="http://www.w3.org/2000/svg">
