@@ -21,12 +21,10 @@ const Comment = ({
   isEditing,
   endProcess,
   addReply,
-  modifyVote,
 }) => {
   const [readMore, setReadMore] = useState(false);
   const [reply, setReply] = useState(false);
   const [editContent, setEditContent] = useState(content);
-  console.log(modifyVote);
 
   const handleReply = () => {
     return setReply(!reply);
@@ -132,7 +130,6 @@ const Comment = ({
               currentUser={currentUser}
               isEditing={isEditing}
               commentId={id}
-              modifyVote={modifyVote}
             />
           );
         })}
