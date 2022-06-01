@@ -2,10 +2,9 @@ import React from "react";
 import { useState, useEffect, useContext } from "react";
 
 const ReplyUpvote = ({ isEditing, existingScore, idForReply, commentId }) => {
+  // const { changeUpvote } = useContext(ReplyContext);
   const [noOfVote, setNoOfVote] = useState(existingScore);
   const [canVote, setCanVote] = useState(true);
-
-  const { changeUpvote } = useContext(ReplyContext);
 
   const downVote = async () => {
     if (canVote && noOfVote > 0) {
@@ -14,9 +13,10 @@ const ReplyUpvote = ({ isEditing, existingScore, idForReply, commentId }) => {
   };
 
   const implementVote = async () => {
+    // const case = {commentId, idForReply, noOfVote};
     setCanVote(false);
     try {
-      await changeUpvote(commentId, idForReply, noOfVote);
+      // await changeUpvote();
     } catch (error) {
       console.log(error);
     }

@@ -90,6 +90,7 @@
   align-self: flex-start;
   align-items: center;
   color: hsl(211, 10%, 45%);
+  resize: none;
 }
 
 
@@ -122,6 +123,7 @@
   align-self: flex-start;
   align-items: center;
   color: hsl(211, 10%, 45%);
+  resize: none;
 }
 
 .readMore-textArea button {
@@ -143,6 +145,7 @@
 
 .edit-textArea {
   height: 10rem;
+  resize: none;
 }
 
 .textArea form .input {
@@ -358,6 +361,7 @@ font-size: 18px;
   min-width: 80%;
   min-height: 70px;
   padding: 10px 15px;
+  margin-right: 5px;
   border: 1px solid hsl(223, 19%, 93%);
   font-family: 'rubik';
   color: hsl(211, 10%, 45%);
@@ -366,6 +370,7 @@ font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
   text-align: flex-start;
+  resize: none;
 }
 
 .form .input:focus {
@@ -377,7 +382,7 @@ font-size: 18px;
 
 .form button {
   border: none;
-  padding: 10px 20px;
+  padding: 10px 25px;
   border-radius: 5px;
   background: hsl(238, 40%, 52%);
   color: #fff;

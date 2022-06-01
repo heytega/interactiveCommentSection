@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import Comments from "./Comments";
 import LoadingPage from "./Loading";
 
